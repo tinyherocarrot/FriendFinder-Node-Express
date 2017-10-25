@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FriendFinder</title>
+
+	<!-- Link to Bootstrap 4 CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+	<div class="container">
+		<header><h2>Survey</h2></header>		
+	</div>
+
+	<hr>
+
+	<div class="container">
+		<form>
+			<!-- Name and Picture input -->
+			<div class="form-group">
+			    <label for="exampleInputEmail1">Email address</label>
+			    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+			</div>
+			<div class="form-group">
+			    <label for="exampleInputPassword1">Password</label>
+			    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+			</div>
+
+			<hr>
+
+		<!-- Question 1 -->
+			<fieldset class="form-group" id="q1">
+			    <legend>1. I see myself as extraverted, enthusiastic.</legend>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios1-1" id="optionsRadios1" value="1">
+			        strongly disagree
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios1-2" id="optionsRadios1" value="2">
+			        somewhat disagree
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios1-3" id="optionsRadios1" value="3">
+			        neutral 
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios1-4" id="optionsRadios1" value="4">
+			        somewhat agree
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios1-5" id="optionsRadios1" value="5">
+			        strongly agree
+			      </label>
+			    </div>
+			</fieldset>
+
+		<!-- Question 2 -->
+			<fieldset class="form-group" id="q2">
+			    <legend>2. I see myself as critical, quarrelsome.</legend>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios2-1" id="optionsRadios2" value="1">
+			        strongly disagree
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios2-2" id="optionsRadios2" value="2">
+			        somewhat disagree
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios2-3" id="optionsRadios2" value="3">
+			        neutral 
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios2-4" id="optionsRadios2" value="4">
+			        somewhat agree
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios2-5" id="optionsRadios2" value="5">
+			        strongly agree
+			      </label>
+			    </div>
+			</fieldset>
+
+		<!-- Question 3 -->
+			<fieldset class="form-group" id="q3">
+			    <legend>3. I see myself as dependable, self-disciplined.</legend>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios3-1" id="optionsRadios3" value="1">
+			        strongly disagree
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios3-2" id="optionsRadios3" value="2">
+			        somewhat disagree
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios3-3" id="optionsRadios3" value="3">
+			        neutral 
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios3-4" id="optionsRadios3" value="4">
+			        somewhat agree
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios3-5" id="optionsRadios3" value="5">
+			        strongly agree
+			      </label>
+			    </div>
+			</fieldset>			
+
+		<!-- Question 4 -->
+			<fieldset class="form-group" id="q4">
+			    <legend>4. I see myself as anxious, easily upset.</legend>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios4-1" id="optionsRadios3" value="1">
+			        strongly disagree
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios4-2" id="optionsRadios3" value="2">
+			        somewhat disagree
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios4-3" id="optionsRadios3" value="3">
+			        neutral 
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios4-4" id="optionsRadios3" value="4">
+			        somewhat agree
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios4-5" id="optionsRadios3" value="5">
+			        strongly agree
+			      </label>
+			    </div>
+			</fieldset>	
+
+		<!-- Question 5 -->
+			<fieldset class="form-group" id="q5">
+			    <legend>5. I see myself as open to new experiences, complex.</legend>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios5-1" id="optionsRadios3" value="1">
+			        strongly disagree
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios5-2" id="optionsRadios3" value="2">
+			        somewhat disagree
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios5-3" id="optionsRadios3" value="3">
+			        neutral 
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios5-4" id="optionsRadios3" value="4">
+			        somewhat agree
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios5-5" id="optionsRadios3" value="5">
+			        strongly agree
+			      </label>
+			    </div>
+			</fieldset>	
+
+		<!-- Question 6 -->
+			<fieldset class="form-group" id="q6">
+			    <legend>6. I see myself as reserved, quiet.</legend>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios6-1" id="optionsRadios3" value="1">
+			        strongly disagree
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios6-2" id="optionsRadios3" value="2">
+			        somewhat disagree
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios6-3" id="optionsRadios3" value="3">
+			        neutral 
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios6-4" id="optionsRadios3" value="4">
+			        somewhat agree
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios6-5" id="optionsRadios3" value="5">
+			        strongly agree
+			      </label>
+			    </div>
+			</fieldset>	
+
+		<!-- Question 7 -->
+			<fieldset class="form-group" id="q7">
+			    <legend>7. I see myself as sympathetic, warm.</legend>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios7-1" id="optionsRadios3" value="1">
+			        strongly disagree
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios7-2" id="optionsRadios3" value="2">
+			        somewhat disagree
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios7-3" id="optionsRadios3" value="3">
+			        neutral 
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios7-4" id="optionsRadios3" value="4">
+			        somewhat agree
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios7-5" id="optionsRadios3" value="5">
+			        strongly agree
+			      </label>
+			    </div>
+			</fieldset>
+
+		<!-- Question 8 -->
+			<fieldset class="form-group" id="q8">
+			    <legend>8. I see myself as disorganized, careless.</legend>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios8-1" id="optionsRadios3" value="1">
+			        strongly disagree
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios8-2" id="optionsRadios3" value="2">
+			        somewhat disagree
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios8-3" id="optionsRadios3" value="3">
+			        neutral 
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios8-4" id="optionsRadios3" value="4">
+			        somewhat agree
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios8-5" id="optionsRadios3" value="5">
+			        strongly agree
+			      </label>
+			    </div>
+			</fieldset>	
+
+		<!-- Question 9 -->
+			<fieldset class="form-group" id="q9">
+			    <legend>9. I see myself as calm, emotionally stable.</legend>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios9-1" id="optionsRadios3" value="1">
+			        strongly disagree
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios9-2" id="optionsRadios3" value="2">
+			        somewhat disagree
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios9-3" id="optionsRadios3" value="3">
+			        neutral 
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios9-4" id="optionsRadios3" value="4">
+			        somewhat agree
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios9-5" id="optionsRadios3" value="5">
+			        strongly agree
+			      </label>
+			    </div>
+			</fieldset>	
+
+		<!-- Question 10 -->
+			<fieldset class="form-group" id="q10">
+			    <legend>10. I see myself as conventional, uncreative.</legend>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios10-1" id="optionsRadios3" value="1">
+			        strongly disagree
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios10-2" id="optionsRadios3" value="2">
+			        somewhat disagree
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios10-3" id="optionsRadios3" value="3">
+			        neutral 
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios10-4" id="optionsRadios3" value="4">
+			        somewhat agree
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="optionsRadios10-5" id="optionsRadios3" value="5">
+			        strongly agree
+			      </label>
+			    </div>
+			</fieldset>	
+
+		</form>
+		
+		<br>
+
+		<button class="btn btn-success" id="submit-survey">Submit</button>
+		
+	</div>
+
+	<script type="text/javascript" src="../../server.js"></script>
+	<script type="text/javascript" src="../routing/htmlRoutes.js"></script>
+	<script type="text/javascript" src="../routing/apiRoutes.js"></script>
+	<script type="text/javascript" src="../data/friends.js"></script>
+
+
+	<!-- Link to JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+</body>
+</html>
