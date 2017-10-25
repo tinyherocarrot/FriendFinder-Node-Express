@@ -11,7 +11,6 @@ var PORT = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-
 // set up routes
 var htmlRoutes = require("./app/routing/htmlRoutes.js")
 var apiRoutes = require("./app/routing/apiRoutes.js")
@@ -21,6 +20,8 @@ htmlRoutes.routeToSurvey(app);
 
 apiRoutes(app);
 
+// import data from friends.js
+var friends = require('./app/data/friends.js')
 
 
 
