@@ -2,8 +2,8 @@
 var friends = 
 [
 	{
-	  "name":"Ahmed",
-	  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+	  "name":"Abed",
+	  "photo":"https://theskogblog.files.wordpress.com/2012/05/abed.jpg",
 	  "scores":[
 	      5,
 	      1,
@@ -19,7 +19,7 @@ var friends =
 	},
 	{
 	  "name":"Deanius",
-	  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+	  "photo":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/James_Dean_-_publicity_-_early.JPG/220px-James_Dean_-_publicity_-_early.JPG",
 	  "scores":[
 	      5,
 	      5,
@@ -35,7 +35,7 @@ var friends =
 	},
 	{
 	  "name":"Caroline",
-	  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+	  "photo":"http://scontent.cdninstagram.com/t51.2885-15/s480x480/e35/c180.0.720.720/16583664_1819416421644664_5767340831631474688_n.jpg?ig_cache_key=MTQ0ODI5ODY5NTE0ODkwNjM4Mw%3D%3D.2.c",
 	  "scores":[
 	      1,
 	      1,

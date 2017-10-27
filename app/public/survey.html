@@ -6,15 +6,50 @@
 	<!-- Link to Bootstrap 4 CSS-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
+    <!-- Link to Bootstrap 4 JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+	<!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+	<!-- Link to Stylesheet -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 </head>
 <body>
-	<div class="container">
-		<header><h2>Survey</h2></header>		
+	<!-- Friend Modal -->
+	<div class="modal fade" id="friendModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel">Your New Best Friend</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <div> <h4 id="match-name"></h4> </div>
+	        <img class="thumbnail" id="match-photo"> 
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
 	</div>
 
-	<hr>
+	<div class="jumbotron">
+		<div class="container">
+			<span></span> <h1>Friend Finder</h1><br>
+
+			<h3>Answer a few questions... <br> Then find your most compatible friend!</h3><br>
+		</div>
+	</div>
 
 	<div class="container">
 		<form>
@@ -382,11 +417,18 @@
 
 		</form>
 		
-		<br>
+		<!-- <br> -->
 
-		<button class="btn btn-success" id="submit-survey">Submit</button>
+		<button class="btn btn-success" id="submit-survey" data-toggle="modal" data-target="#friendModal">Submit</button>
 		
 	</div>
+
+	<footer class="footer">
+      <div class="container">
+        <div class="text-center text-muted">&copy; Andrew Huang 2017</div>
+      </div>
+    </footer>
+
 
 	<script type="text/javascript" src="../../server.js"></script>
 	<script type="text/javascript" src="../routing/htmlRoutes.js"></script>
@@ -397,14 +439,19 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
 	<script type="text/javascript"> 
+
 		$('#submit-survey').on('click', () => {
 
+			// allow form submission on ENTER
 			event.preventDefault();
 		 
+		 	// compile form data into an array
 			var scoresArr=[];
 			for (var i = 1; i < 11; i++) {
 				scoresArr.push(parseInt($(`input[name='optionsRadios${i}']:checked`).val()))
 			}
+
+
 			// define newFriend object with inputed name, photo, and scores
 			var newFriend = {
 			  	name: $('#userName').val(),
@@ -416,17 +463,20 @@
 			console.log(newFriend);
 
 			// post newFriend via route defined  in apiRoute
-			$.post("/api/friends", newFriend)
-		    .done(function(data) {
+		    //here, data is the closestMatch.person obj
+			$.post("/api/friends", newFriend, function(data) {
+				// NOTE: THIS CONSOLE LOG WILL ONLY APPEAR IN DEV TOOLS, NOT IN GIT BASH LOG
 		        console.log("after a post");
-		        console.log(data);
+
+		        // alert(JSON.stringify(data));
 				// display recieved data to DOM in a BS4 modal HERE
-		        // alert("Adding friend...");
+				console.log(data.name, data.photo);
+				$('#match-name').text(data.name);
+				$('#match-photo').attr('src', data.photo);
+
+
 		    });
 			
-			// $.get("/api/friends", function(data) {
-			// 	console.log(data)
-			// })
 		})
 
 	</script>

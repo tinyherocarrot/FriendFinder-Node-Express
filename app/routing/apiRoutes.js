@@ -23,36 +23,38 @@ module.exports = function(app) {
 		// console.log(friendsData);
 
 		// compatibility logic HERE
-		//=========================
+		//==============================
 			//closestMatch is a object with personobj and totalDifference
 		var closestMatch = {
 			// person: null,
 			"person": {"name": "Andrew", "photo": "", "scores": [1,1,1,1,1,1,1,1,1,1]},
 			"totalDifference": 1000
 		};
+
 		// run through each person in data file
 		friendsData.forEach(person => {
+
 			var totalDifference = 0;
-			console.log(`${person.name}'s scores: ${person.scores}`);
-			console.log(`${newFriend.name}'s scores: ${newFriend.scores}`);
 			
 			// and calculate total difference between newFriends scores and person's scores
 			for (var i = 0; i < 10; i++) {
 				totalDifference += Math.abs(person.scores[i]-newFriend.scores[i]);
 			}
-			console.log(totalDifference);
+
 			// if this person is more compatible, replace closestMatch with this person
 			if(totalDifference < closestMatch.totalDifference) {
 				closestMatch.person = person;
 				closestMatch.totalDifference = totalDifference;
 			}
-
 		})
 
-		console.log(closestMatch);
+		// console.log(closestMatch.person);
+
 		// push to the imported data file HERE
 		friendsData.push(newFriend);	
+
 		// return JSON obj of closestMatch person to the front end
-		res.json("hi im an returned");
+		res.json(closestMatch.person);
+
 	});
 }
